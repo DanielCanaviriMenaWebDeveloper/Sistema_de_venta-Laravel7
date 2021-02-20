@@ -1,0 +1,25 @@
+
+
+*** MODELO ***
+- Crear un Modelo con su respectivo Factory, Migration, Seeder y Controller
+  * Para el ejemplo trabajaremos sobre una tabla llamada categories
+    
+    $ php artisan make:model Category --all 
+
+  * Con esto observamos que tenemos creado los siguientes archivos
+    - Model:      Category.php
+    - Factory:    CategoryFactory.php
+    - Seeder:     CategorySeeder.php
+    - Migration:  #_create_categories_table.php
+    - Controller: CategoryController.php 
+
+*** REQUEST ***
+
+Form Request Validation
+
+  php artisan make:request StoredBlogPost
+
+  Ejemplo: 
+
+    * php artisan make:request Category/StoreRequest
+    * php artisan make:request Category/UpdateRequest
