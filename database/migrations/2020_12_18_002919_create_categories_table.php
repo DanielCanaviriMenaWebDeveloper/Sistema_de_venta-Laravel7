@@ -8,6 +8,7 @@ class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
+     * Ejecute las migraciones
      *
      * @return void
      */
@@ -17,7 +18,9 @@ class CreateCategoriesTable extends Migration
             $table->id();
 
             $table->string('name');
-            $table->string('description')->nullable(); /* nullable : Campo no requerido puede ser nulo si desea. */
+            
+            /* nullable : Campo no requerido puede ser nulo si desea. */
+            $table->string('description')->nullable(); 
 
             $table->timestamps();
         });

@@ -1,3 +1,18 @@
+<?php 
+    $arreglo = array();
+    $arreglo[0] = "valor-1";
+    $arreglo[1] = 2;
+    $arreglo[2] = 12.5;
+    $arreglo[3] = true;
+    echo $arreglo[0] . "<br>";
+    echo $arreglo[1] . "<br>";
+    echo $arreglo[2] . "<br>";
+    echo $arreglo[3] . "<br>";
+
+    echo "<pre>";
+        var_dump($arreglo); 
+    echo "</pre><br>";
+?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -84,6 +99,8 @@
                     Laravel
                 </div>
 
+
+
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
@@ -98,3 +115,5 @@
         </div>
     </body>
 </html>
+
+

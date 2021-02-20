@@ -22,9 +22,15 @@ class CategoryController extends Controller
         return view('admin.category.create'); /* Retornamos la vista create */
     }
 
-    public function StoreRequest(Request $request)
+    /* public function store (Request $request)
     {
-        //
+        
+    } */
+
+    public function store (StoreRequest $request)
+    {
+        Category::create($request->all());
+        return redirect()->route('categories.index');
     }
 
     public function show(Category $category)
