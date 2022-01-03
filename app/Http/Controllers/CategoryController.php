@@ -40,16 +40,18 @@ class CategoryController extends Controller
 
     public function edit(Category $category)
     {
-        //
+        return view('admin.category.show', compact('category'));
     }
 
-    public function UpdateRequest(Request $request, Category $category)
+    public function Update (UpdateRequest $request, Category $category)
     {
-        //
+        $category->update($request->all());
+        return redirect()->route('categories.index');
     }
 
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+        return redirect()->route('categories.index');
     }
 }
