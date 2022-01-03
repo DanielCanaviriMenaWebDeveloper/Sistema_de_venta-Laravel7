@@ -12,20 +12,14 @@ class CategoryController extends Controller
     
     public function index()
     {
-        /* Haremos uso de DataTable por tanto no definimos orderBy, paginate etc. */
-        $categories = Category::get(); /* Obtenemos todas las categorias */
+        $categories = Category::get();
         return view('admin.category.index', compact('categories'));
     }
 
     public function create()
     {
-        return view('admin.category.create'); /* Retornamos la vista create */
+        return view('admin.category.create');
     }
-
-    /* public function store (Request $request)
-    {
-        
-    } */
 
     public function store (StoreRequest $request)
     {
@@ -43,7 +37,7 @@ class CategoryController extends Controller
         return view('admin.category.show', compact('category'));
     }
 
-    public function Update (UpdateRequest $request, Category $category)
+    public function update (UpdateRequest $request, Category $category)
     {
         $category->update($request->all());
         return redirect()->route('categories.index');
