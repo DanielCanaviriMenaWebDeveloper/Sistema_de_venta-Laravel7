@@ -17,7 +17,7 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name');
+            $table->string('name')->unique();
             
             /* nullable : Campo no requerido puede ser nulo si desea. */
             $table->string('description')->nullable(); 
