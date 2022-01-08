@@ -23,3 +23,13 @@ Form Request Validation
 
     * php artisan make:request Category/StoreRequest
     * php artisan make:request Category/UpdateRequest
+
+    Funciones que se crean en un Controlador 
+    -  index =>  Nos mostrara la información de lo que tenemos almacenado en la BD. 
+    -  create => Nos muestra un formulario para poder crear un nuevo registro. 
+    -  store => Que va de la mano con create para poder almacenar los datos del formulario en la BD. 
+    -  show => Nos muestra la información de manera individual.
+    -  edit => Nos da la opción de cargar un formulario con los datos de la BD para poder modificarlos.
+    -  update => La función actualizar que nos determinara de acuerdo a las restricciones de seguridad si 
+                        el registro que tenemos en edit se puede actualizar.         
+    -  destroy => Elinina el registro que estemos seleccionando. 
